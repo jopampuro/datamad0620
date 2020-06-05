@@ -1,13 +1,16 @@
-#Example: 
+ #Example: 
 
 eggs = (1,3,8,3,2)
 
 my_listComprehension = [1/egg for egg in eggs]
 
-print(my_listComprehension)
+print(my_listComprehension) 
+
+
 
 #Insert here the module/library import statements 
-
+ 
+ 
 
 
 
@@ -15,11 +18,17 @@ print(my_listComprehension)
 # Remember to use list comprehensions and to print your results
 
 
+square =[x**2 for x in range(20)]
+
+print(square)
+
 
 
 #2. Calculate the first 50 power of two. Use power_of_two as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+power_of_two = [2**50]
+print(power_of_two)
 
 
 
@@ -27,24 +36,34 @@ print(my_listComprehension)
 # You will probably need to install math library with pip and import it in this file.  
 # Remember to use list comprehensions and to print your results
 
+import math
+
+print([math.sqrt(x) for x in range(100)])
+
+
 
 
 
 #4. Create this list [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]. Use my_list as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+my_list = [x for x in range(-10,1)]
+print(my_list)
 
-
-
+ 
 #5. Find the odd numbers from 1-100. Use odds as the name of the list. 
 # Remember to use list comprehensions and to print your results
 
+odds = [n for n in range (1,100) if n % 2 !=0 ]
+print(odds)
 
 
 
 #6. Find all of the numbers from 1-1000 that are divisible by 7. Use divisible_by_seven as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+divisible_by_seven = [ k for k in range (1-1000) if k % 7 == 0]
+print (divisible_by_seven)
 
 
 
@@ -52,7 +71,10 @@ print(my_listComprehension)
 # Remember to use list comprehensions and to print your results
 # You can use the following test string but feel free to modify at your convenience
 
+vowels = ["a","e","i","o","u"]
 teststring = 'Find all of the words in a string that are monosyllabic'
+non_vowels= [l for l in teststring if l not in vowels]
+print(non_vowels)
 
 
 
@@ -61,6 +83,9 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
 
+sentence = 'The Quick Brown Fox Jumped Over The Lazy Dog'
+capital_letters = [t for t in sentence if t.istitle()]
+print(capital_letters)
 
 
 
@@ -68,6 +93,10 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
 
+vowels = ["a","e","i","o","u"]
+sentence = 'The Quick Brown Fox Jumped Over The Lazy Dog'
+consonants = [z for z in sentence if z not in vowels]
+print(consonants)
 
 
 
@@ -76,14 +105,24 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
 
+import os 
+
+files = os.listdir()
+print(files)
+
+
 
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
 
+random_lists = [[random.randrange(0,100,1) for _ in range(10)] for _ in range(4)]
+print(random_lists)
 
 
+
+"""
 
 #12. Flatten the following list of lists. Use flatten_list as the name of the output.
 # Remember to use list comprehensions and to print your results
@@ -106,7 +145,7 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 
 
 for i in ['a','b','c']:
-    print i**2
+    print (i**2)
 
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
@@ -187,5 +226,6 @@ def linux_interaction():
 
 Total_Marks = int(input("Enter Total Marks Scored: ")) 
 Num_of_Sections = int(input("Enter Num of Sections: "))
+ """ 
 
 
