@@ -1,0 +1,2 @@
+Insert Into Invoices(`invoice number`,date,car,customer,salesperson)
+VALUES("852399038","22-08-2018","0","1","3"),("731166526","31-12-2018","3","0","5"),("271135104","22-01-2019","2","2","7");SELECT * FROM my_sql.Invoices;
